@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/header";
+import { MobileNav, Navbar } from "@/components/header";
 import { navLink } from "@/config";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,8 @@ export default function RootLayout({
       <body className="bg-[#051009] min-h-screen ">
         <header className="w-full flex flex-col items-center justify-center relative ">
           <Navbar />
-          <div className="w-full flex items-center justify-between custom-container ">
+          <MobileNav />
+          <div className="w-full  items-center justify-between custom-container hidden lg:flex ">
             <div className="h-20 w-20 overflow-hidden relative ">
               <Image
                 src={

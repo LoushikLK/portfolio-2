@@ -26,7 +26,7 @@ const Navbar = () => {
 
   if (viewNav)
     return (
-      <div className="w-full flex items-center justify-center fixed animate-nav top-0  bg-gradient-to-t backdrop-blur-[2px] from-[#05100900] to-black/10 ">
+      <div className=" hidden w-full lg:flex items-center justify-center fixed animate-nav top-0  bg-gradient-to-t backdrop-blur-[2px] from-[#05100900] to-black/10 ">
         <div className="w-full flex items-center justify-between custom-container  b ">
           <div className="h-20 w-20 overflow-hidden relative ">
             <Image
