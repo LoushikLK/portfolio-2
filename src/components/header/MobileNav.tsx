@@ -17,7 +17,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="flex lg:hidden items-center justify-between relative p-2 w-full border-b border-gray-500/40 ">
+    <div className="flex lg:hidden items-center justify-between relative p-2 w-full border-b border-gray-500/40 z-[999] ">
       <div className="h-10 w-10 overflow-hidden relative ">
         <Image
           src={"https://lkcodes.netlify.app/static/media/aboutimg.e0f07ba3.JPG"}

@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#051009] min-h-screen ">
-        <header className="w-full flex flex-col items-center justify-center relative ">
+        <header className="w-full flex flex-col items-center justify-center relative  ">
           <Navbar />
           <MobileNav />
-          <div className="w-full  items-center justify-between custom-container hidden lg:flex ">
+          <div className="w-full  items-center justify-between custom-container hidden lg:flex absolute left top-0 z-[999] ">
             <div className="h-20 w-20 overflow-hidden relative ">
               <Image
                 src={
