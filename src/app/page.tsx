@@ -19,15 +19,38 @@ export default function Home() {
         id="#home"
       >
         <div className="w-full min-h-screen h-full flex items-center flex-col gap-8 justify-center bg-gradient-to-t from-black/40  to-black/10 relative ">
-          <h3 className="font-semibold text-white tracking-wide text-3xl  ">
+          <h3 className="font-semibold text-white tracking-wide text-xl lg:text-3xl  ">
             Hi, I'm
           </h3>
 
-          <h1 className="w-full text-center md:text-5xl   lg:text-[8rem] font-extrabold uppercase text-white text- ">
-            Loushik
-          </h1>
+          <svg height="100%" width="100%">
+            <defs>
+              <pattern
+                id="polka-dots"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle fill="#ffffff" cx="25" cy="25" r="3"></circle>
+              </pattern>
+            </defs>
 
-          <h3 className="font-semibold text-white tracking-wide text-3xl uppercase ">
+            <text
+              x="50%"
+              y="80%"
+              textAnchor="middle"
+              className="w-full text-center text-6xl md:text-8xl  lg:text-[8rem] font-extrabold uppercase text-white text-"
+            >
+              Loushik
+            </text>
+          </svg>
+          {/* <h1 className="w-full text-center md:text-5xl animate-charcter   lg:text-[8rem] font-extrabold uppercase text-white text- ">
+            Loushik
+          </h1> */}
+
+          <h3 className="font-semibold text-white tracking-wide  text-xl text-center lg:text-3xl uppercase ">
             SOFTWARE ENGINEER, FULL-STACK DEVELOPER.
           </h3>
           <BannerButton />

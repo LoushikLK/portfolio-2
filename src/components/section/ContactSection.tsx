@@ -44,17 +44,17 @@ const ContactSection = () => {
   //   console.log(email, name, message);
 
   return (
-    <section className="w-full custom-container " id="about">
+    <section className="w-full custom-container mb-8 " id="about">
       <div className="w-full  ">
         <div className="flex items-center w-full py-8 gap-6">
-          <h3 className="font-semibold tracking-wide text-3xl min-w-fit text-theme">
+          <h3 className="font-semibold tracking-wide text-xl lg:text-3xl min-w-fit text-theme">
             04. Get In Touch
           </h3>
           <span className="w-full h-[1px] bg-theme/20"></span>
         </div>
 
         <div className="w-full flex flex-col gap-4">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="flex flex-col w-full gap-2">
               <input
                 type="text"
@@ -70,7 +70,7 @@ const ContactSection = () => {
                 </small>
               )}
             </div>
-            <div className="flex flex-col w-full gap-2">
+            <div className="flex  flex-col w-full gap-2">
               <input
                 type="email"
                 name="email"
@@ -103,10 +103,12 @@ const ContactSection = () => {
               </small>
             )}
           </div>
+
           <button
-            className="btn-primary w-fit mt-8 flex mx-auto "
+            className="btn-primary w-fit mt-8 flex mx-auto relative "
             onClick={handleSubmit}
           >
+            <div className="animate-ping border-theme border absolute top-0 left-0 h-full w-full rounded-md  "></div>
             Submit
           </button>
         </div>

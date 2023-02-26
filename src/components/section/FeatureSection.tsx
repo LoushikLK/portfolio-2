@@ -7,16 +7,16 @@ const FeaturedSection = () => {
     <section className="w-full custom-container pb-8 " id="#work">
       <div className="w-full  ">
         <div className="flex items-center w-full py-8 gap-6">
-          <h3 className="font-semibold tracking-wide text-3xl min-w-fit text-theme">
+          <h3 className="font-semibold tracking-wide text-xl lg:text-3xl min-w-fit text-theme">
             03. Some Things I’ve Built
           </h3>
           <span className="w-full h-[1px] bg-theme/20"></span>
         </div>
       </div>
       <div className="w-full flex flex-col items-center">
-        <div className="flex items-center justify-center gap-4 p-8 max-w-5xl relative ">
-          <div className="h-[25rem] w-[50rem] overflow-hidden relative "></div>
-          <div className="h-[25rem] w-[35rem] overflow-hidden absolute z-40 left-0 ">
+        <div className="flex items-center flex-col lg:flex-row justify-center gap-4 py-4 md:p-8 max-w-5xl relative ">
+          <div className="h-[25rem] w-[50rem] hidden lg:flex overflow-hidden relative "></div>
+          <div className="h-[25rem] w-[35rem] hidden lg:flex overflow-hidden absolute z-40 left-0 ">
             <Image
               src={"/profile.jpg"}
               alt="Loushik"
@@ -25,8 +25,8 @@ const FeaturedSection = () => {
             />
           </div>
 
-          <div className="flex flex-col items-end justify-items-end relative z-50 gap-8 ">
-            <div className="flex flex-col items-end gap-4">
+          <div className="flex flex-col items-start lg:items-end justify-items-end relative z-50 gap-8 ">
+            <div className="flex flex-col items-start lg:items-end gap-4">
               <h3 className="font-medium text-base text-theme tracking-wide">
                 Featured Project
               </h3>
@@ -34,7 +34,7 @@ const FeaturedSection = () => {
                 Halcyon Theme
               </h3>
             </div>
-            <h3 className="p-6 shadow-xl font-semibold text-gray-400 bg-gray-900 rounded-sm tracking-wide text-right">
+            <h3 className="p-6 shadow-xl font-semibold text-gray-400 bg-gray-900 rounded-sm tracking-wide text-left lg:text-right">
               A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
               and more. Available on Visual Studio Marketplace, Package Control,
               Atom Package Manager, and npm.

@@ -17,7 +17,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="flex lg:hidden items-center justify-between relative p-2 w-full border-b border-gray-500/40 z-[999]   ">
+    <div className="flex lg:hidden items-center justify-between relative p-2  border-b border-gray-500/40 z-[999] w-full   ">
       <div className="h-10 w-10 overflow-hidden relative ">
         <Image
           src={"https://lkcodes.netlify.app/static/media/aboutimg.e0f07ba3.JPG"}
@@ -34,7 +34,7 @@ const MobileNav = () => {
         <Menu className="text-theme text-2xl cursor-pointer focus:ring-1 ring-theme " />
       </button>
       <div
-        className={`w-full max-w-[90%] bg-[#051009] absolute transition-all ease-in-out duration-300 top-[3.7rem] right-0 min-h-screen ${
+        className={`w-full max-w-[90%] bg-[#051009] absolute transition-all ease-in-out duration-300 top-[3.7rem] z-[9999] right-0 min-h-screen ${
           viewMenu ? "translate-x-0" : "translate-x-[101%]"
         } `}
       >

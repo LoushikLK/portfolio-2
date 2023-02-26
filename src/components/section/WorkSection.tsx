@@ -4,7 +4,7 @@ import Link from "next/link";
 const WorkSection = () => {
   return (
     <section className="w-full custom-container pb-8 ">
-      <div className="w-full grid grid-cols-9  mx-auto gap-4 ">
+      <div className="w-full grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9  mx-auto gap-4 ">
         <div className="flex flex-col items-center justify-center gap-4 p-4 w-full col-span-3 bg-gray-800 rounded-sm ">
           <div className="flex w-full items-center justify-between gap-8">
             <ProjectFile className="font-medium tracking-wide text-4xl  transition-all ease-in-out duration-300 text-theme" />
@@ -118,12 +118,13 @@ const WorkSection = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-center pt-8 justify-center">
+      <div className="w-full flex items-center pt-8 justify-center  ">
         <Link
           href={"https://github.com/LoushikLK"}
           target="_blank"
-          className="btn-primary"
+          className="btn-primary relative "
         >
+          <div className="animate-ping border-theme border absolute top-0 left-0 h-full w-full rounded-md  "></div>
           View More
         </Link>
       </div>
