@@ -2,6 +2,7 @@ import {
   AboutSection,
   BannerButton,
   ToolingSection,
+  WorkSection,
 } from "@/components/section";
 
 export default function Home() {
@@ -36,6 +37,10 @@ export default function Home() {
       {/* ===============================Tooling Section =============================== */}
 
       <ToolingSection />
+
+      {/* ===============================Work Section =============================== */}
+
+      <WorkSection />
 
       <div className="text-red-500">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam
