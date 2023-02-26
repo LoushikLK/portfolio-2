@@ -6,6 +6,13 @@
   .custom-container {
     @apply container mx-auto px-4;
   }
+  .common-transition {
+    @apply !transition-all !ease-in-out !duration-300;
+  }
+  .btn-primary {
+    @apply border-theme text-theme font-medium tracking-wider rounded-md px-6 py-2 border bg-transparent  hover:bg-theme hover:text-white;
+    @apply common-transition;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");

@@ -118,6 +118,15 @@ const WorkSection = () => {
           </div>
         </div>
       </div>
+      <div className="w-full flex items-center pt-8 justify-center">
+        <Link
+          href={"https://github.com/LoushikLK"}
+          target="_blank"
+          className="btn-primary"
+        >
+          View More
+        </Link>
+      </div>
     </section>
   );
 };
