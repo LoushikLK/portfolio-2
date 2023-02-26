@@ -1,13 +1,14 @@
 import {
   AboutSection,
   BannerButton,
+  FeatureSection,
   ToolingSection,
   WorkSection,
 } from "@/components/section";
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full ">
       {/* =================== main section ========================= */}
       <section
         className="w-full  bg-cover bg-center bg-no-repeat  "
@@ -34,11 +35,15 @@ export default function Home() {
       {/* ============================= About section ============================= */}
       <AboutSection />
 
-      {/* ===============================Tooling Section =============================== */}
+      {/* ========================= Tooling Section =========================== */}
 
       <ToolingSection />
 
-      {/* ===============================Work Section =============================== */}
+      {/* ======================== Featured Section ======================== */}
+
+      <FeatureSection />
+
+      {/* ==================== work section ========================= */}
 
       <WorkSection />
 

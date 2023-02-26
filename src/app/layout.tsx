@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#051009] min-h-screen text-white">
+      <body className="bg-[#051009] min-h-screen  text-white">
         <header className="w-full flex flex-col items-center justify-center relative  ">
           <Navbar />
           <MobileNav />
