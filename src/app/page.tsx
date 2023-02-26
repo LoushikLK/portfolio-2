@@ -1,4 +1,8 @@
-import { AboutSection, BannerButton } from "@/components/section";
+import {
+  AboutSection,
+  BannerButton,
+  ToolingSection,
+} from "@/components/section";
 
 export default function Home() {
   return (
@@ -28,6 +32,11 @@ export default function Home() {
       </section>
       {/* ============================= About section ============================= */}
       <AboutSection />
+
+      {/* ===============================Tooling Section =============================== */}
+
+      <ToolingSection />
+
       <div className="text-red-500">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam
         laudantium, atque repudiandae fuga, nostrum veritatis corporis molestiae
