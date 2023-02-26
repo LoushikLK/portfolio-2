@@ -20,7 +20,7 @@ export default function Home() {
       >
         <div className="w-full min-h-screen h-full flex items-center flex-col gap-8 justify-center bg-gradient-to-t from-black/40  to-black/10 relative ">
           <h3 className="font-semibold text-white tracking-wide text-xl lg:text-3xl  ">
-            Hi, I'm
+            Hi, I{"'"}m
           </h3>
 
           <svg height="100%" width="100%">
