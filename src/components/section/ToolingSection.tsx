@@ -46,7 +46,7 @@ const toolingData = [
 
 const ToolingSection = () => {
   return (
-    <section className="w-full custom-container pb-8 " id="about">
+    <section className="w-full custom-container pb-8 " id={"expertise"}>
       <div className="w-full  ">
         <div className="flex items-center w-full py-8 gap-6">
           <h3 className="font-semibold tracking-wide text-xl lg:text-3xl min-w-fit text-theme">

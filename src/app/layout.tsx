@@ -56,7 +56,7 @@ export default function RootLayout({
                 <Link
                   href={item?.path}
                   key={item?.label}
-                  className="text-theme font-medium tracking-wide text-base"
+                  className="text-theme border-b border-transparent hover:border-theme transition-all ease-in-out duration-300 font-medium tracking-wide text-base"
                 >
                   {item?.label}
                 </Link>

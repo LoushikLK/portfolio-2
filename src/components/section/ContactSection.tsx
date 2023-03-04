@@ -44,7 +44,7 @@ const ContactSection = () => {
   //   console.log(email, name, message);
 
   return (
-    <section className="w-full custom-container mb-8 " id="about">
+    <section className="w-full custom-container mb-8 " id="contact">
       <div className="w-full  ">
         <div className="flex items-center w-full py-8 gap-6">
           <h3 className="font-semibold tracking-wide text-xl lg:text-3xl min-w-fit text-theme">
@@ -89,7 +89,6 @@ const ContactSection = () => {
           <div className="flex flex-col w-full gap-2">
             <textarea
               name="message"
-              id=""
               onChange={handleChange}
               cols={20}
               rows={5}

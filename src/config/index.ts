@@ -1,22 +1,22 @@
 export const navLink = [
   {
     label: "Home",
-    path: "/#home",
+    path: "#home",
   },
   {
     label: "About",
-    path: "/#about",
+    path: "#about",
   },
   {
     label: "Expertise",
-    path: "/#expertise",
+    path: "#expertise",
   },
   {
     label: "Work",
-    path: "/#work",
+    path: "#work",
   },
   {
     label: "Contact",
-    path: "/#contact",
+    path: "#contact",
   },
 ];
