@@ -1,7 +1,6 @@
 "use client";
 
 import { navLink } from "@/config";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -26,9 +25,9 @@ const Navbar = () => {
 
   if (viewNav)
     return (
-      <div className=" hidden w-full lg:flex items-center justify-center fixed animate-nav top-0  bg-gradient-to-t backdrop-blur-[2px] from-[#051009]/10 to-black/10 shadow-lg  z-[999]">
+      <div className=" hidden w-full pt-2 lg:flex items-center justify-center fixed animate-nav top-0  bg-gradient-to-t backdrop-blur-[2px] from-[#051009]/10 to-black/10 shadow-lg  z-[999]">
         <div className="w-full flex items-center justify-between custom-container  b ">
-          <div className="h-20 w-20 overflow-hidden relative ">
+          {/* <div className="h-20 w-20 overflow-hidden relative ">
             <Image
               src={
                 "https://lkcodes.netlify.app/static/media/aboutimg.e0f07ba3.JPG"
@@ -37,7 +36,8 @@ const Navbar = () => {
               fill
               className="h-20 w-20 object-contain overflow-hidden relative"
             />
-          </div>
+          </div> */}
+          <h1 className="text-theme font-semibold text-4xl">Loushik</h1>
           <nav className="flex items-center gap-6">
             {navLink?.map((item) => (
               <Link
@@ -48,6 +48,9 @@ const Navbar = () => {
                 {item?.label}
               </Link>
             ))}
+            <a href="/CV.pdf" download className="btn-primary">
+              Resume
+            </a>
           </nav>
         </div>
       </div>

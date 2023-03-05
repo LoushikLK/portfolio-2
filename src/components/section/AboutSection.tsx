@@ -40,6 +40,7 @@ const AboutSection = () => {
                 alt="Loushik"
                 fill
                 className="h-[18rem] w-[20rem] object-cover overflow-hidden rounded-lg z-[55] relative"
+                loading="lazy"
               />
             </div>
             <div className="h-[18rem] w-[20rem] border-theme border-2 rounded-lg absolute top-5 left-5 hidden lg:flex"></div>

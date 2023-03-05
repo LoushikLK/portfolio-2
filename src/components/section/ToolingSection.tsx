@@ -55,7 +55,7 @@ const ToolingSection = () => {
           <span className="w-full h-[1px] bg-theme/20"></span>
         </div>
       </div>
-      <div className="w-full flex flex-row flex-wrap justify-center gap-4 p-4 lg:p-8 bg-theme/50 rounded-xl ">
+      <div className="w-full flex flex-row flex-wrap justify-center gap-2 md:gap-4 py-4 px-1 lg:px-8 lg:py-8 bg-theme/50 rounded-xl ">
         {toolingData?.map((item) => (
           <div
             className="flex items-center gap-4 bg-gray-800 p-2 lg:px-4 lg:py-3 rounded-lg min-w-[10rem]"
