@@ -1,3 +1,4 @@
+import MatrixRain from "@/components/core/MatrixRain";
 import {
   AboutSection,
   BannerButton,
@@ -11,14 +12,12 @@ export default function Home() {
   return (
     <main className="w-full ">
       {/* =================== main section ========================= */}
+      <MatrixRain />
       <section
-        className="w-full  bg-cover bg-center  bg-no-repeat  "
-        style={{
-          backgroundImage: `url(/main-bg.webp)`,
-        }}
+        className="w-full  bg-cover bg-center  bg-no-repeat relative z-50 "
         id="home"
       >
-        <div className="w-full min-h-screen h-full flex items-center flex-col gap-8 justify-center bg-gradient-to-t backdrop-blur-[2px] from-black/40  to-black/10 relative ">
+        <div className="w-full min-h-screen h-full flex items-center flex-col gap-8 justify-center bg-gradient-to-t backdrop-blur-[1.5px] from-black/40  to-black/10 relative ">
           <h3 className="font-semibold text-white tracking-wide text-xl lg:text-3xl  ">
             Hi, I{"'"}m
           </h3>

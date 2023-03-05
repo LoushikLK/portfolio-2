@@ -10,25 +10,6 @@ export const metadata = {
   description: "Portfolio website of loushik",
 };
 
-const socialLink = [
-  {
-    title: "Github",
-    url: "https://github.com/LoushikLK",
-  },
-  {
-    title: "LinkedIn",
-    url: "https://in.linkedin.com/in/loushik-kumar-giri-a65a54215",
-  },
-  {
-    title: "Twitter",
-    url: "https://twitter.com/LoushikGiri1",
-  },
-  {
-    title: "Instagram",
-    url: "https://www.instagram.com/god____of___thunder/",
-  },
-];
-
 export default function RootLayout({
   children,
 }: {

@@ -31,14 +31,25 @@ const ContactSection = () => {
     }
   };
 
-  const handleSubmit = () => {
-    !name?.trim() ? setNameError("Enter a valid name") : setNameError("");
-    !email?.trim() ? setEmailError("Enter a valid email") : setEmailError("");
-    !message?.trim()
-      ? setMessageError("Enter a valid message")
-      : setMessageError("");
+  const handleSubmit = async () => {
+    try {
+      !name?.trim() ? setNameError("Enter a valid name") : setNameError("");
+      !email?.trim() ? setEmailError("Enter a valid email") : setEmailError("");
+      !message?.trim()
+        ? setMessageError("Enter a valid message")
+        : setMessageError("");
 
-    console.log(email, name, message);
+      const response = await fetch("/api/sendmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, name, message }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {}
   };
 
   //   console.log(email, name, message);
