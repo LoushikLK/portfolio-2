@@ -42,7 +42,7 @@ export default function RootLayout({
                   {item?.label}
                 </Link>
               ))}
-              <a href="/CV.pdf" download className="btn-primary">
+              <a href="/resume.docx" download className="btn-primary">
                 Resume
               </a>
             </nav>

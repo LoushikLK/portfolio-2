@@ -52,7 +52,7 @@ const MobileNav = () => {
               {item?.label}
             </Link>
           ))}
-          <a href="/CV.pdf" download className="btn-primary !w-fit !ml-2">
+          <a href="/resume.docx" download className="btn-primary !w-fit !ml-2">
             Resume
           </a>
         </nav>
