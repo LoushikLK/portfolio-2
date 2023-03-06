@@ -18,8 +18,8 @@ export default function Home() {
         id="home"
       >
         <div className="w-full min-h-screen h-full flex items-center flex-col gap-8 justify-center bg-gradient-to-t backdrop-brightness-[0.4]  relative ">
-          <h3 className="font-semibold text-white tracking-wide text-xl lg:text-3xl  ">
-            Hi, I{"'"}m
+          <h3 className="font-semibold text-white tracking-wide text-xl lg:text-2xl -mb-6 ">
+            Hi, my name is,
           </h3>
 
           <svg height="100%" width="100%">
