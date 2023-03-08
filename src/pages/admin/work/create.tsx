@@ -103,7 +103,10 @@ const Create = () => {
         >
           {schema?.map((item) =>
             item?.type === "file" ? (
-              <div className="flex  flex-col w-full gap-2 col-span-12 ">
+              <div
+                className="flex  flex-col w-full gap-2 col-span-12 "
+                key={item?.key}
+              >
                 <UploadImage
                   onChange={(e: any) => {
                     formik?.setFieldTouched("image"),
@@ -118,7 +121,10 @@ const Create = () => {
                 )}
               </div>
             ) : item?.type === "textarea" ? (
-              <div className="flex  flex-col w-full gap-2 col-span-12 ">
+              <div
+                className="flex  flex-col w-full gap-2 col-span-12 "
+                key={item?.key}
+              >
                 <textarea
                   rows={10}
                   name={item?.name}
@@ -134,7 +140,10 @@ const Create = () => {
                 )}
               </div>
             ) : item?.type === "multi-select" ? (
-              <div className="flex  flex-col w-full gap-2 col-span-6 ">
+              <div
+                className="flex  flex-col w-full gap-2 col-span-6 "
+                key={item?.key}
+              >
                 <div className="flex flex-wrap gap-2 w-full items-center">
                   {formik?.values?.tooling?.map((item: string) => (
                     <span
@@ -170,7 +179,10 @@ const Create = () => {
                 )}
               </div>
             ) : (
-              <div className="flex  flex-col w-full gap-2 col-span-6 ">
+              <div
+                className="flex  flex-col w-full gap-2 col-span-6 "
+                key={item?.key}
+              >
                 <input
                   type="text"
                   name={item?.name}
