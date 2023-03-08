@@ -14,7 +14,7 @@ const SendReply = ({
       } transition-all ease-in-out duration-300  `}
       onClick={() => setView(false)}
     >
-      <div className="w-full relative z-50 flex flex-col max-w-4xl bg-gray-800 shadow-xl rounded-xl border-[1px] ">
+      <div className="w-full relative z-50 flex flex-col max-w-4xl bg-gray-800 shadow-xl backdrop-blur-sm rounded-xl border-[1px] ">
         <h3 className="font-medium text-2xl tracking-wide text-theme p-4 border-b">
           Reply
         </h3>
