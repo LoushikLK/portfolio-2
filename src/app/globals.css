@@ -52,6 +52,10 @@ button {
   cursor: url("../assets/static/arrow-click.svg") 15 15, move !important;
 }
 
+.icon-hover:hover {
+  cursor: url("../assets/static/arrow-click.svg") 15 15, move !important;
+}
+
 ::-webkit-scrollbar {
   width: 13px;
 }
