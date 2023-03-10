@@ -10,6 +10,8 @@ const dbConnect =
         // Use current db connection
         return handler(req, res);
       }
+      console.log(MONGO_URI);
+
       // Use new db connection
       await mongoose.connect(MONGO_URI, {
         useUnifiedTopology: true,
@@ -17,7 +19,6 @@ const dbConnect =
       } as ConnectOptions);
       return handler(req, res);
     } catch (error) {
-      console.log(error);
       res.status(500).json({
         status: "FAIL",
         message: "Connection to database failed.",
