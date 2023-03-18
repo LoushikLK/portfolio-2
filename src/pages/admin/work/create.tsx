@@ -183,14 +183,16 @@ const Create = () => {
                 key={item?.key}
               >
                 <div className="flex flex-wrap gap-2 w-full items-center">
-                  {formik?.values?.tooling?.map((item: string) => (
-                    <span
-                      className="rounded-full text-white bg-theme/50 px-2 py-1 shadow-lg"
-                      key={item}
-                    >
-                      {item}
-                    </span>
-                  ))}
+                  {formik?.values?.tooling &&
+                    formik?.values?.tooling?.length > 0 &&
+                    formik?.values?.tooling?.map((item: string) => (
+                      <span
+                        className="rounded-full text-white bg-theme/50 px-2 py-1 shadow-lg"
+                        key={item}
+                      >
+                        {item}
+                      </span>
+                    ))}
                 </div>
                 <div className="w-full relative flex">
                   <input
