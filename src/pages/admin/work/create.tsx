@@ -41,10 +41,18 @@ const schema = [
   {
     key: "2",
     label: "Tooling",
-    name: "tool",
+    name: "tooling",
     initialValue: "",
     validationSchema: Yup.array(Yup.string()),
     type: "multi-select",
+  },
+  {
+    key: "6",
+    label: "Featured",
+    name: "feature",
+    initialValue: false,
+    validationSchema: Yup.boolean(),
+    type: "checkbox",
   },
   {
     key: "3",
@@ -72,9 +80,39 @@ const Create = () => {
     initialValues: initialValues,
     validationSchema: Yup.object(validationSchema),
 
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       try {
-        console.log(values);
+        try {
+          const formData = new FormData();
+
+          formData.append("isFeatured", values?.feature);
+          formData.append("title", values?.title);
+          formData.append("description", values?.description);
+          formData.append("githubLink", values?.githubLink);
+          formData.append("websiteLink", values?.websiteLink);
+
+          if (Array.isArray(values?.tooling)) {
+            values?.tooling?.map((item: string) => {
+              return formData.append("tooling", item);
+            });
+          } else {
+            formData.append("tooling", values?.tooling);
+          }
+
+          const response = await fetch("/api/work", {
+            method: "POST",
+            // headers:{
+            //   "Content-Type": "application/json"
+            // },
+            body: formData,
+          });
+
+          const data = await response.json();
+
+          console.log(data);
+        } catch (error: any) {
+          alert(error?.message);
+        }
       } catch (error) {}
     },
   });
@@ -171,6 +209,32 @@ const Create = () => {
                   >
                     Add
                   </button>
+                </div>
+                {formik?.touched[item?.name] && formik?.errors[item?.name] && (
+                  <small className="tracking-wide font-medium text-red-500">
+                    {formik?.errors[item?.name] as string}
+                  </small>
+                )}
+              </div>
+            ) : item?.type === "checkbox" ? (
+              <div
+                className="flex  flex-col w-full gap-2 col-span-6 "
+                key={item?.key}
+              >
+                <div className="flex items-center w-full justify-between">
+                  <h3 className="font-medium tracking-wide text-base ml-2">
+                    {item?.label}
+                  </h3>
+
+                  <input
+                    type="checkbox"
+                    name={item?.name}
+                    checked={formik?.values[item?.name]}
+                    onChange={(e) => {
+                      formik?.setFieldValue(item?.name, e?.target?.checked);
+                    }}
+                    className=" h-6 w-6"
+                  />
                 </div>
                 {formik?.touched[item?.name] && formik?.errors[item?.name] && (
                   <small className="tracking-wide font-medium text-red-500">

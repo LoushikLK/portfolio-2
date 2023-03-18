@@ -7,5 +7,6 @@ export interface WorkType extends Document {
   tooling: string[];
   githubLink: string;
   websiteLink: string;
-  image: string;
+  imagePath: string;
+  imageUrl: string;
 }

@@ -16,7 +16,8 @@ const workSchema = new Schema<WorkType, Model<WorkType>>(
     ],
     githubLink: String,
     websiteLink: String,
-    image: String,
+    imagePath: String,
+    imageUrl: String,
   },
   {
     timestamps: true,
