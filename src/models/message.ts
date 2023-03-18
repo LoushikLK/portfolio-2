@@ -1,5 +1,5 @@
 import { MessageType } from "@/types/message";
-import { model, Model, Schema } from "mongoose";
+import { model, Model, models, Schema } from "mongoose";
 
 const messageSchema = new Schema<MessageType, Model<MessageType>>(
   {
@@ -21,7 +21,6 @@ const messageSchema = new Schema<MessageType, Model<MessageType>>(
   }
 );
 
-export const MessageModel = model<MessageType, Model<MessageType>>(
-  "message",
-  messageSchema
-);
+export const MessageModel =
+  models.message ||
+  model<MessageType, Model<MessageType>>("message", messageSchema);

@@ -33,23 +33,35 @@ const ContactSection = () => {
 
   const handleSubmit = async () => {
     try {
-      !name?.trim() ? setNameError("Enter a valid name") : setNameError("");
+      !name?.trim() ? setNameError("Enter a valid subject") : setNameError("");
       !email?.trim() ? setEmailError("Enter a valid email") : setEmailError("");
       !message?.trim()
         ? setMessageError("Enter a valid message")
         : setMessageError("");
 
-      const response = await fetch("/api/sendmail", {
+      const response = await fetch("/api/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, name, message }),
+        body: JSON.stringify({ email, subject: name, message }),
       });
 
       const data = await response.json();
-      console.log(data);
-    } catch (error) {}
+
+      throw new Error(data?.message);
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(error?.message);
+      }
+    } finally {
+      setName("");
+      setEmail("");
+      setMessage("");
+      setNameError("");
+      setEmailError("");
+      setMessageError("");
+    }
   };
 
   //   console.log(email, name, message);
@@ -70,7 +82,7 @@ const ContactSection = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Enter your name*"
+                placeholder="Enter your subject*"
                 onChange={handleChange}
                 value={name}
                 className="w-full focus:outline-theme focus:outline text-theme py-2 px-4 bg-transparent border-theme/20 focus-visible:outline-none border rounded-md "
