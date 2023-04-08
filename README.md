@@ -1,1 +1,1 @@
- https://lkcodes.vercel.app
+ https://loushik.vercel.app
