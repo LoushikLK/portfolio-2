@@ -14,23 +14,12 @@ const AboutSection = () => {
         <div className="w-full flex items-start  gap-8 flex-col-reverse pb-20 lg:flex-row justify-center md:justify-between">
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold tracking-wide text-gray-400">
-              I am a full-stack Web Developer from India.I am passionate about
-              learning and building new things. My interest for software
-              development started from 2021 when i start learning new skill.
+          I am a dedicated full-stack Web Developer based in India, driven by a relentless passion for acquiring knowledge and constructing innovative creations. My profound interest in software development ignited in 2021, catalyzing my journey of skill acquisition and growth
             </h3>
             <h3 className="font-semibold tracking-wide text-gray-400">
-              Fast-forward to today, and I’ve had the privilege of working with
-              compsny. My main focus these days is building accessible,
-              inclusive products and digital experiences at my company for a
-              variety of clients.
+            Over time, I've completed numerous projects, resulting in high-quality websites. My project portfolio encompasses a range of technologies, including HTML5, CSS3, JavaScript, ReactJS, NodeJS, MongoDB, Bootstrap, Express, REST API, and even React Native. I possess a proactive mindset, always seeking fresh opportunities to tackle. A selection of my projects is displayed below.
             </h3>
-            <h3 className="font-semibold tracking-wide text-gray-400">
-              I Have done several projects and made quality websites. I Have
-              done projects In HTML5 , CSS3 ,JavaScript , ReactJS , NodeJS ,
-              MongoDB , Bootstrap , Express , REST Api and react native. I am a
-              self-starter and I am always looking for new challenges. Some of
-              my projects are posted below.
-            </h3>
+        
           </div>
 
           <div className=" w-full lg:w-fit h-full flex justify-center relative">
