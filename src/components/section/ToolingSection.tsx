@@ -73,11 +73,11 @@ const ToolingSection = () => {
       <div className="w-full flex flex-row flex-wrap justify-center gap-2 md:gap-4 py-4 px-1 lg:px-8 lg:py-8 bg-theme/50 rounded-xl ">
         {toolingData?.map((item) => (
           <div
-            className="flex items-center gap-4 bg-gray-800 p-2 lg:px-4 lg:py-3 rounded-lg min-w-[10rem]"
+            className="flex items-center w-full xxs:w-[47%] xs:w-auto gap-4 bg-gray-800 p-2 lg:px-4 lg:py-3 rounded-lg md:min-w-[10rem]"
             key={item?.title}
           >
             <div className="flex items-center  ">{item?.icon}</div>
-            <h3 className="font-medium tracking-wide text-lg text-theme/50">
+            <h3 className="font-medium tracking-wide  text-sm md:text-lg text-theme/50">
               {item?.title}
             </h3>
           </div>
