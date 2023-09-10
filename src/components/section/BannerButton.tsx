@@ -15,7 +15,7 @@ const defaultOptions = {
 
 const BannerButton = () => {
   return (
-    <Link href={"/#about"} className="absolute bottom-10 ">
+    <Link href={"/#about"} className="absolute md:bottom-10 bottom-20 ">
       <Lottie options={defaultOptions} height={80} width={80} />
     </Link>
   );

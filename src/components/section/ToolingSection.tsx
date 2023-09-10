@@ -1,18 +1,21 @@
 import {
+  Amazonaws,
   Docker,
   Expressjs,
+  Firebase,
   Javascript,
   Mongodb,
   Nextjs,
   Nodejs,
+  Python,
   ReactIcon,
   Typescript,
 } from "@/assets/icons";
 
 const toolingData = [
   {
-    title: "React",
-    icon: <ReactIcon className="text-theme text-4xl  " />,
+    title: "Python",
+    icon: <Python className="text-theme text-4xl  " />,
   },
   {
     title: "Javascript",
@@ -35,12 +38,24 @@ const toolingData = [
     icon: <Mongodb className="text-theme text-4xl  " />,
   },
   {
+    title: "Firebase",
+    icon: <Firebase className="text-theme text-4xl  " />,
+  },
+  {
+    title: "React",
+    icon: <ReactIcon className="text-theme text-4xl  " />,
+  },
+  {
     title: "Nextjs",
     icon: <Nextjs className="text-theme text-4xl  " />,
   },
   {
     title: "Docker",
     icon: <Docker className="text-theme text-4xl  " />,
+  },
+  {
+    title: "AWS",
+    icon: <Amazonaws className="text-theme text-4xl  " />,
   },
 ];
 
