@@ -1,1 +1,1 @@
- https://loushik.vercel.app
+ https://loushik.dev
