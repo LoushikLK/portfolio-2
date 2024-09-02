@@ -65,9 +65,9 @@ const PrivateLayout = ({ children, title = "Admin" }: Props) => {
         <main className={`min-h-screen bg-[#051009] text-white relative ml-16`}>
           <header className={`h-16 bg-gray-800`}>
             <div className="flex h-16 items-center justify-between px-4">
-              <h1 className="lg:text-xl text-sm uppercase lg:block font-semibold text-white">
+              <h3 className="lg:text-xl text-sm uppercase lg:block font-semibold text-white">
                 Welcome Admin
-              </h1>
+              </h3>
               <div className="flex items-center gap-6">
                 <button className="cursor-pointer text-lg btn-primary  font-medium tracking-wide ">
                   Logout

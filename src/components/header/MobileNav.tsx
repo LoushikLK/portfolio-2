@@ -28,7 +28,7 @@ const MobileNav = () => {
             className="h-10 w-10 object-contain overflow-hidden relative"
           />
         </div> */}
-        <h1 className="text-theme font-semibold text-4xl">Loushik</h1>
+        <h1 className="text-theme font-semibold text-4xl">Loushik.dev</h1>
         <button
           className="flex items-center"
           onClick={handleClickMenu}

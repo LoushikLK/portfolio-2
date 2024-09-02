@@ -6,7 +6,11 @@ import "./globals.css";
 
 export const metadata = {
   title: "Loushik Dev",
-  description: "Portfolio website of loushik",
+  description:
+    "Hi! I am Loushik. I am a fullstack developer from India. Join me on my journey as a developer.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +35,7 @@ export default function RootLayout({
                 className="h-20 w-20 object-contain overflow-hidden relative"
               />
             </div> */}
-            <h1 className="text-theme font-semibold text-4xl">Loushik</h1>
+            <h1 className="text-theme font-semibold text-4xl">Loushik.dev</h1>
             <nav className="flex items-center gap-6">
               {navLink?.map((item) => (
                 <Link
@@ -49,6 +53,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+
         <footer className="w-full ">
           <div className="flex items-center"></div>
 
@@ -59,9 +64,9 @@ export default function RootLayout({
                 ❤️
               </h3>
               <h3 className="font-medium tracking-wide text-sm">by</h3>
-              <h1 className="font-medium tracking-wide text-theme animate-pulse text-sm">
+              <h3 className="font-medium tracking-wide text-theme animate-pulse text-sm">
                 Loushik
-              </h1>
+              </h3>
             </span>
             <span className="hidden md:flex">|</span>
             <h3 className="font-medium tracking-wide text-sm">

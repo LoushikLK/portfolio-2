@@ -9,7 +9,7 @@ const FeaturedSection = () => {
       <div className="w-full  ">
         <div className="flex items-center w-full py-8 gap-6">
           <h3 className="font-semibold tracking-wide text-xl lg:text-3xl min-w-fit text-theme">
-            03. Some Things I’ve Built
+            03. Few Things I’ve Built
           </h3>
           <span className="w-full h-[1px] bg-theme/20"></span>
         </div>

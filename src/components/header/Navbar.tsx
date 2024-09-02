@@ -37,7 +37,7 @@ const Navbar = () => {
               className="h-20 w-20 object-contain overflow-hidden relative"
             />
           </div> */}
-          <h1 className="text-theme font-semibold text-4xl">Loushik</h1>
+          <h1 className="text-theme font-semibold text-4xl">Loushik.dev</h1>
           <nav className="flex items-center gap-6">
             {navLink?.map((item) => (
               <Link

@@ -43,7 +43,7 @@ const AboutSection = () => {
           <div className=" w-full lg:w-fit h-full flex justify-center relative">
             <div className="lg:h-[18rem] h-[20rem] w-[20rem] lg:w-[20rem] overflow-hidden relative rounded-lg z-[55] ">
               <Image
-                src={"/profile.jpg"}
+                src={"/profile.webp"}
                 alt="Loushik"
                 fill
                 className="h-[18rem] w-[20rem] object-cover overflow-hidden rounded-lg z-[55] relative"

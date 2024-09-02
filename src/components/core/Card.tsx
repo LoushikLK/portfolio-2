@@ -35,11 +35,11 @@ export default function Card({
             {content}
           </h4>
 
-          <h1
+          <h3
             className={`group-hover:text-white text-xl font-semibold ${titleClassName}`}
           >
             {title}
-          </h1>
+          </h3>
         </div>
       </div>
     </>
