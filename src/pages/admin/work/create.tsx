@@ -123,7 +123,7 @@ const Create = () => {
         "tooling",
         formik?.values?.tooling?.length
           ? [...formik.values?.tooling, tooling]
-          : [tooling]
+          : [tooling],
       );
       setTooling("");
     } catch (error) {}
@@ -147,8 +147,8 @@ const Create = () => {
               >
                 <UploadImage
                   onChange={(e: any) => {
-                    formik?.setFieldTouched("image"),
-                      formik?.setFieldValue("image", e.target.files[0]);
+                    (formik?.setFieldTouched("image"),
+                      formik?.setFieldValue("image", e.target.files[0]));
                   }}
                   outerClassName="bg-gray-800 rounded-xl"
                 />
@@ -263,7 +263,7 @@ const Create = () => {
                   </small>
                 )}
               </div>
-            )
+            ),
           )}
           <div className="w-full flex items-center justify-center ml-2">
             <button type="submit" className="btn-primary">

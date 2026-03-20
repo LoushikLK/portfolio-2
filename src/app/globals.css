@@ -148,3 +148,7 @@ svg text {
     background-position: 200% center;
   }
 }
+
+.loading-lock {
+  overflow: hidden !important;
+}

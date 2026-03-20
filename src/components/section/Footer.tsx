@@ -33,7 +33,7 @@ const Footer = () => {
             </span>
           </motion.div>
           <h2 className="text-white/40 font-mono text-xs uppercase tracking-[0.2em]">
-            // Handcrafted_Experience_Complete
+            {"// Handcrafted_Experience_Complete"}
           </h2>
         </div>
 

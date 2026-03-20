@@ -1,7 +1,8 @@
-import { UPLOAD } from "@/assets/animation";
+"use client";
 
-import { useRef } from "react";
-import Lottie from "react-lottie";
+import { UPLOAD } from "@/assets/animation";
+import { useEffect, useRef } from "react";
+
 type Props = {
   value?: any;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | any;
@@ -12,15 +13,6 @@ type Props = {
   uploadText?: string;
   accept?: string;
   outerClassName?: string;
-};
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: UPLOAD,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
 };
 
 const UploadImage = ({
@@ -34,6 +26,23 @@ const UploadImage = ({
   outerClassName = "w-full",
 }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const lottieContainer = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (lottieContainer.current) {
+      let animation: any;
+      import("lottie-web").then((lottie) => {
+        animation = lottie.default.loadAnimation({
+          container: lottieContainer.current!,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          animationData: UPLOAD,
+        });
+      });
+      return () => animation?.destroy();
+    }
+  }, []);
 
   const handleDrop = (e: any) => {
     try {
@@ -74,10 +83,12 @@ const UploadImage = ({
             }}
           >
             <div className="flex flex-col items-center justify-center gap-4">
-              <Lottie
-                options={defaultOptions}
-                height={height - 50}
-                width={width}
+              <div
+                ref={lottieContainer}
+                style={{
+                  height: height - 50,
+                  width: width,
+                }}
               />
               <small className="text-center font-medium tracking-wide">
                 {uploadText}

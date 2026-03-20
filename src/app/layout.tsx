@@ -1,3 +1,4 @@
+import { Loader } from "@/components/core";
 import { ModernMobileNav, ModernNavbar } from "@/components/header";
 import { Footer } from "@/components/section";
 
@@ -105,6 +106,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <Loader />
         <ModernMobileNav />
         <ModernNavbar />
         {children}

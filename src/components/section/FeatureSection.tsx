@@ -178,7 +178,7 @@ const FeaturedSection = () => {
         {/* Section Header */}
         <div className="flex items-center w-full mb-24 gap-6">
           <h3 className="font-mono text-matrix text-sm tracking-[0.3em] uppercase">
-            // 03. Artifact_Archive
+            {"// 03. Artifact_Archive"}
           </h3>
           <div className="h-[1px] flex-1 bg-gradient-to-r from-matrix/30 to-transparent" />
         </div>

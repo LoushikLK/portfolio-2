@@ -63,7 +63,7 @@ const AboutSection = () => {
           {/* Section Header */}
           <div className="flex items-center w-full mb-16 gap-6">
             <h3 className="font-mono text-matrix text-sm tracking-[0.3em] uppercase">
-              // 01. Identity_Profile
+              {"// 01. Identity_Profile"}
             </h3>
             <div className="h-[1px] flex-1 bg-gradient-to-r from-matrix/30 to-transparent" />
           </div>

@@ -1,22 +1,31 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { arrowDown } from "@/assets/animation";
 import Link from "next/link";
-import Lottie from "react-lottie";
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: arrowDown,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 
 const BannerButton = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (container.current) {
+      let animation: any;
+      import("lottie-web").then((lottie) => {
+        animation = lottie.default.loadAnimation({
+          container: container.current!,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          animationData: arrowDown,
+        });
+      });
+      return () => animation?.destroy();
+    }
+  }, []);
+
   return (
     <Link href={"/#about"} className="absolute md:bottom-10 bottom-20 ">
-      <Lottie options={defaultOptions} height={80} width={80} />
+      <div ref={container} style={{ height: 80, width: 80 }} />
     </Link>
   );
 };

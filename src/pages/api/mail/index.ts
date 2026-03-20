@@ -1,6 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import dbConnect from "@/middlewares/connectDb";
-import { MessageModel } from "@/models/message";
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
@@ -26,19 +25,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
       if (!subject || !email || !message)
         throw new Error("subject,email and message are required");
 
-      //create a message
-
-      const messageData = await MessageModel.create({
-        subject,
-        email,
-        message,
-      });
-
-      if (!messageData) throw new Error("message sending failed");
-
       const mailOptions = {
         from: process.env.EMAIL,
-        to: "loushikkumargiri@gmail.com",
+        to: "loushik.giri@gmail.com",
         subject: `Mail in Website for ${subject}`,
         text: message,
       };
