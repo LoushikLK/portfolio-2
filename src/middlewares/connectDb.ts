@@ -10,8 +10,6 @@ const dbConnect =
         return handler(req, res);
       }
 
-      console.log(MONGO_URI);
-
       // Use new db connection
       await mongoose.connect(MONGO_URI, {
         useUnifiedTopology: true,

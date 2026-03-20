@@ -123,29 +123,60 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit} className="space-y-6 relative">
             <AnimatePresence mode="wait">
               {status === "success" ? (
-                <motion.div 
+                <motion.div
+                  key="success"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  className="p-12 rounded-2xl border border-matrix/40 bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center text-center space-y-4 min-h-[400px]"
+                  className="p-12 rounded-2xl border border-matrix/40 bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center text-center space-y-4 min-h-[406px]"
                 >
                   <div className="w-16 h-16 rounded-full bg-matrix/10 flex items-center justify-center text-matrix mb-4">
-                    <Wifi size={32} />
+                    <ShieldCheck size={32} />
                   </div>
-                  <h3 className="font-mono text-lg text-white uppercase tracking-widest">Transmission_Received</h3>
-                  <p className="text-gray-400 text-sm max-w-xs">
-                    Your payload has been successfully integrated into the system archive. Response sequence initiated.
+                  <h3 className="font-mono text-lg text-white uppercase tracking-widest">
+                    Transmission_Received
+                  </h3>
+                  <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
+                    Your payload has been successfully integrated into the
+                    system archive. Neural bridge active.
                   </p>
-                  <button 
+                  <button
+                    type="button"
                     onClick={() => setStatus("idle")}
-                    className="mt-8 font-mono text-[10px] text-matrix hover:text-white transition-colors"
+                    className="mt-8 font-mono text-[10px] text-matrix hover:text-white transition-all border border-matrix/20 px-6 py-2 rounded-full bg-matrix/5 hover:bg-matrix/10 hover:shadow-[0_0_15px_rgba(16,233,86,0.1)]"
                   >
                     [ RETURN_TO_INPUT ]
                   </button>
                 </motion.div>
+              ) : status === "error" ? (
+                <motion.div
+                  key="error"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  className="p-12 rounded-2xl border border-red-500/40 bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center text-center space-y-4 min-h-[406px]"
+                >
+                  <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 mb-4">
+                    <AlertCircle size={32} />
+                  </div>
+                  <h3 className="font-mono text-lg uppercase tracking-widest text-red-500">
+                    Transmission_Failed
+                  </h3>
+                  <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
+                    Encryption mismatch or uplink failure. Your payload could
+                    not be transmitted to the neural core.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setStatus("idle")}
+                    className="mt-8 font-mono text-[10px] text-red-500 hover:text-white transition-all border border-red-500/20 px-6 py-2 rounded-full bg-red-500/5 hover:bg-red-500/10 hover:shadow-[0_0_15px_rgba(239,68,68,0.1)]"
+                  >
+                    [ ATTEMPT_RETRY ]
+                  </button>
+                </motion.div>
               ) : (
-                <motion.div 
-                  initial={{ opacity: 0 }}
+                <motion.div
+                  key="input"
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="space-y-6"
