@@ -4,3 +4,4 @@ export { default as ContactSection } from "./ContactSection";
 export { default as FeatureSection } from "./FeatureSection";
 export { default as ToolingSection } from "./ToolingSection";
 export { default as WorkSection } from "./WorkSection";
+export { default as Footer } from "./Footer";

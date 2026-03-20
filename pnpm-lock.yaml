@@ -23,9 +23,15 @@ importers:
       formik:
         specifier: ^2.2.9
         version: 2.4.6(react@18.2.0)
+      framer-motion:
+        specifier: ^12.38.0
+        version: 12.38.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       jsonwebtoken:
         specifier: ^9.0.0
         version: 9.0.2
+      lucide-react:
+        specifier: ^0.577.0
+        version: 0.577.0(react@18.2.0)
       mongoose:
         specifier: ^7.0.1
         version: 7.8.1
@@ -798,6 +804,20 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
+  framer-motion@12.38.0:
+    resolution: {integrity: sha512-rFYkY/pigbcswl1XQSb7q424kSTQ8q6eAC+YUsSKooHQYuLdzdHjrt6uxUC+PRAO++q5IS7+TamgIw1AphxR+g==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -1182,6 +1202,11 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
+  lucide-react@0.577.0:
+    resolution: {integrity: sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   memory-pager@1.5.0:
     resolution: {integrity: sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==}
 
@@ -1234,6 +1259,12 @@ packages:
   mongoose@7.8.1:
     resolution: {integrity: sha512-c3MY8P1mGUGO+0H8rqxMNmAmhP0xb2EPNItfr7tHAHkh52uB0owH4Gu6q1GTUYj8yoHEDG5MN2V1aBBR6aJPuA==}
     engines: {node: '>=14.20.1'}
+
+  motion-dom@12.38.0:
+    resolution: {integrity: sha512-pdkHLD8QYRp8VfiNLb8xIBJis1byQ9gPT3Jnh2jqfFtAsWUA3dEepDlsWe/xMpO8McV+VdpKVcp+E+TGJEtOoA==}
+
+  motion-utils@12.36.0:
+    resolution: {integrity: sha512-eHWisygbiwVvf6PZ1vhaHCLamvkSbPIeAYxWUuL3a2PD/TROgE7FvfHWTIH4vMl798QLfMw15nRqIaRDXTlYRg==}
 
   mpath@0.9.0:
     resolution: {integrity: sha512-ikJRQTk8hw5DEoFVxHG1Gn9T/xcjtdnOKIU1JTmGjZZlg9LST2mBLmcX3/ICIbgJydT2GOc15RnNy5mHmzfSew==}
@@ -2496,7 +2527,7 @@ snapshots:
       eslint: 8.34.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.34.0))(eslint@8.34.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3)(eslint@8.34.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.34.0))(eslint@8.34.0))(eslint@8.34.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.34.0)
       eslint-plugin-react: 7.35.0(eslint@8.34.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.34.0)
@@ -2527,7 +2558,7 @@ snapshots:
       is-bun-module: 1.1.0
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3)(eslint@8.34.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.34.0))(eslint@8.34.0))(eslint@8.34.0)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -2545,7 +2576,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3)(eslint@8.34.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.34.0)(typescript@4.9.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.34.0))(eslint@8.34.0))(eslint@8.34.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -2762,6 +2793,15 @@ snapshots:
       tslib: 2.7.0
 
   fraction.js@4.3.7: {}
+
+  framer-motion@12.38.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      motion-dom: 12.38.0
+      motion-utils: 12.36.0
+      tslib: 2.7.0
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   fs.realpath@1.0.0: {}
 
@@ -3150,6 +3190,10 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
+  lucide-react@0.577.0(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+
   memory-pager@1.5.0:
     optional: true
 
@@ -3201,6 +3245,12 @@ snapshots:
       - mongodb-client-encryption
       - snappy
       - supports-color
+
+  motion-dom@12.38.0:
+    dependencies:
+      motion-utils: 12.36.0
+
+  motion-utils@12.36.0: {}
 
   mpath@0.9.0: {}
 

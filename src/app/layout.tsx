@@ -1,15 +1,74 @@
-import { MobileNav, Navbar } from "@/components/header";
-import { navLink } from "@/config";
-import Link from "next/link";
+import { ModernMobileNav, ModernNavbar } from "@/components/header";
+import { Footer } from "@/components/section";
 
 import "./globals.css";
 
+import Script from "next/script";
+
 export const metadata = {
-  title: "Loushik Dev",
+  metadataBase: new URL("https://loushik.dev"),
+  title: {
+    default: "Loushik | Full Stack Developer & Software Engineer",
+    template: "%s | Loushik",
+  },
   description:
-    "Hi! I am Loushik. I am a fullstack developer from India. Join me on my journey as a developer.",
+    "Loushik is a Full Stack developer and Software Engineer from India. Expertise in Golang, React, Node.js, and Distributed Systems. Building high-performance digital experiences.",
+  keywords: [
+    "Loushik",
+    "Loushik Giri",
+    "Loushik Kumar Giri",
+    "Loushik Dev",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Solution Architect",
+    "Golang Developer",
+    "React Developer",
+    "Node.js Developer",
+    "India",
+    "Portfolio",
+  ],
+  authors: [{ name: "Loushik", url: "https://loushik.dev" }],
+  creator: "Loushik",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://loushik.dev",
+    title: "Loushik | Full Stack Developer & Software Engineer",
+    description:
+      "Full Stack developer building high-performance digital experiences. Specializing in Golang, React, and Node.js.",
+    siteName: "Loushik's Portfolio",
+    images: [
+      {
+        url: "/profile.webp",
+        width: 1200,
+        height: 630,
+        alt: "Loushik - Full Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Loushik | Full Stack Developer & Software Engineer",
+    description:
+      "Full Stack developer building high-performance digital experiences. Specializing in Golang, React, and Node.js.",
+    images: ["/profile.webp"],
+    creator: "@LoushikLK",
+  },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -20,61 +79,36 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#051009] min-h-screen  text-white w-full overflow-hidden overflow-y-auto relative ">
-        <MobileNav />
-        <header className=" flex flex-col items-center justify-center relative   ">
-          <Navbar />
-          <div className="w-full  items-center justify-between custom-container hidden lg:flex absolute py-4  top-0 z-[999] ">
-            {/* <div className="h-20 w-20 overflow-hidden relative ">
-              <Image
-                src={
-                  "https://lkcodes.netlify.app/static/media/aboutimg.e0f07ba3.JPG"
-                }
-                alt="Loushik"
-                fill
-                className="h-20 w-20 object-contain overflow-hidden relative"
-              />
-            </div> */}
-            <h1 className="text-theme font-semibold text-4xl">Loushik.dev</h1>
-            <nav className="flex items-center gap-6">
-              {navLink?.map((item) => (
-                <Link
-                  href={item?.path}
-                  key={item?.label}
-                  className="text-theme border-b border-transparent hover:border-theme transition-all ease-in-out duration-300 font-medium tracking-wide text-base"
-                >
-                  {item?.label}
-                </Link>
-              ))}
-              <a href="/resume.pdf" download className="btn-primary">
-                Resume
-              </a>
-            </nav>
-          </div>
-        </header>
+      <body className="bg-[#051009] min-h-screen text-white w-full overflow-hidden overflow-y-auto relative ">
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Loushik",
+              url: "https://loushik.dev",
+              image: "https://loushik.dev/profile.webp",
+              sameAs: [
+                "https://github.com/LoushikLK",
+                "https://linkedin.com/in/loushik",
+              ],
+              jobTitle: "Full Stack Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+              description:
+                "Loushik is a Full Stack developer and Software Engineer from India specializing in Golang, React, and Node.js.",
+            }),
+          }}
+        />
+        <ModernMobileNav />
+        <ModernNavbar />
         {children}
-
-        <footer className="w-full ">
-          <div className="flex items-center"></div>
-
-          <div className="w-full flex flex-col md:flex-row items-center justify-center p-4 gap-4 bg-gray-900 ">
-            <span className="flex items-center gap-2 ">
-              <h3 className="font-medium tracking-wide text-sm">Made with</h3>
-              <h3 className="font-medium tracking-wide text-sm animate-pulse ">
-                ❤️
-              </h3>
-              <h3 className="font-medium tracking-wide text-sm">by</h3>
-              <h3 className="font-medium tracking-wide text-theme animate-pulse text-sm">
-                Loushik
-              </h3>
-            </span>
-            <span className="hidden md:flex">|</span>
-            <h3 className="font-medium tracking-wide text-sm">
-              © copyright {new Date().getFullYear()} Loushik. All right
-              reserved.
-            </h3>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
