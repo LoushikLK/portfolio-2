@@ -60,7 +60,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="w-full relative z-50 pt-12 pb-12" id="contact">
+    <section className="w-full relative z-50 pt-12 pb-12 overflow-hidden" id="contact">
       {/* Background Pulse Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-matrix/5 blur-[120px] rounded-full pointer-events-none" />
       

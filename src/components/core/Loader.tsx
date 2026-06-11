@@ -52,7 +52,7 @@ const Loader = () => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[9999] bg-[#051009] flex flex-col items-center justify-center font-mono selection:bg-matrix selection:text-black"
+          className="fixed inset-0 z-[9999] bg-[#051009] flex flex-col items-center justify-center font-mono selection:bg-matrix selection:text-black overflow-hidden"
         >
           <div className="relative w-72 md:w-96 flex flex-col items-center">
             {/* Holographic Scanner Effect Container */}
@@ -84,7 +84,7 @@ const Loader = () => {
             </div>
 
             {/* Sub-status and Metadata */}
-            <div className="w-full mt-6 grid grid-cols-2 gap-4">
+            <div className="w-full mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-3 rounded-lg border border-matrix/10 bg-black/40 backdrop-blur-md">
                 <span className="block text-[8px] text-matrix/40 uppercase mb-1">
                   Architecture

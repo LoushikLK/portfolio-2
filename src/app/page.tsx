@@ -1,4 +1,5 @@
 import MatrixRain from "@/components/core/MatrixRain";
+import { AnimatedTagline } from "@/components/core";
 import {
   AboutSection,
   BannerButton,
@@ -49,9 +50,7 @@ export default function Home() {
             Loushik
           </h1> */}
 
-          <h3 className="font-semibold text-white tracking-wide  text-xl text-center lg:text-3xl uppercase ">
-            SOFTWARE ENGINEER, FULL-STACK DEVELOPER.
-          </h3>
+          <AnimatedTagline />
           <BannerButton />
         </div>
       </section>

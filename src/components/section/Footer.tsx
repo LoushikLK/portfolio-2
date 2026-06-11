@@ -1,16 +1,17 @@
 "use client";
 
-import { Github, VisitLink } from "@/assets/icons";
+import { Github, LinkedIn, TwitterX } from "@/assets/icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Terminal, Cpu, Heart, Share2, Globe, Command } from "lucide-react";
+import { Terminal, Cpu, Heart, Globe, Command } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { name: "Github", icon: <Github width={18} height={18} />, url: "https://github.com/LoushikLK" },
-    { name: "LinkedIn", icon: <Share2 size={18} />, url: "https://linkedin.com/in/loushik" },
+    { name: "LinkedIn", icon: <LinkedIn width={18} height={18} />, url: "https://linkedin.com/in/loushik" },
+    { name: "Twitter", icon: <TwitterX width={18} height={18} />, url: "https://twitter.com/loushikgiri1" },
     { name: "Portfolio", icon: <Globe size={18} />, url: "https://loushik.dev" },
   ];
 
